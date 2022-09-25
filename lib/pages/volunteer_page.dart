@@ -12,6 +12,13 @@ class VolunteerPage extends StatefulWidget {
 class _VolunteerPageState extends State<VolunteerPage> {
   @override
   Widget build(BuildContext context) {
-    return const MapsPage();
+    return Column(
+      children: const [
+        SizedBox(
+          height: 781,
+          child: MapsPage(),
+        ),
+      ],
+    );
   }
 }
