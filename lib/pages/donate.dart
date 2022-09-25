@@ -29,6 +29,11 @@ class _DonateState extends State<Donate> {
     super.dispose();
   }
 
+  LatLng currentLocation = new LatLng(32.776665, -96.796989);
+  LatLng currentLocation1 = new LatLng(31.776665, -96.796989);
+  LatLng currentLocation2 = new LatLng(33.776665, -96.796989);
+  LatLng currentLocation3 = new LatLng(33.0, -96.796989);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -121,6 +126,42 @@ class _DonateState extends State<Donate> {
                             ),
                           ),
                         );
+                        addDonor(
+                          Marker(
+                            markerId: MarkerId(
+                              currentLocation.toString(),
+                            ),
+                            position: currentLocation1,
+                            infoWindow: InfoWindow(
+                              title: _nameController.text.trim(),
+                              snippet: _additionalInfoController.text.trim(),
+                            ),
+                          ),
+                        );
+                        addDonor(
+                          Marker(
+                            markerId: MarkerId(
+                              currentLocation.toString(),
+                            ),
+                            position: currentLocation2,
+                            infoWindow: InfoWindow(
+                              title: _nameController.text.trim(),
+                              snippet: _additionalInfoController.text.trim(),
+                            ),
+                          ),
+                        );
+                        addDonor(
+                          Marker(
+                            markerId: MarkerId(
+                              currentLocation.toString(),
+                            ),
+                            position: currentLocation3,
+                            infoWindow: InfoWindow(
+                              title: _nameController.text.trim(),
+                              snippet: _additionalInfoController.text.trim(),
+                            ),
+                          ),
+                        );
                         final dono = Donator(
                           _additionalInfoController.text,
                           currentLocation,
@@ -165,15 +206,6 @@ class _DonateState extends State<Donate> {
     final json = dono.toJson();
 
     var collection = FirebaseFirestore.instance.collection('Markers');
-
-    // ignore: avoid_print
-    print("FirebaseFirestore.instance.collection('Markers')" +
-        collection.toString());
-
-    var collectionDoc = collection.doc('go');
-
-    print("FirebaseFirestore.instance.collection('Markers')" +
-        collectionDoc.toString());
     await collection.doc('go').set(json);
 
     //await docUser.set(json);
