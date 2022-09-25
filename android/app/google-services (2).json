@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "600595896686",
+    "project_id": "impact-dfw-22",
+    "storage_bucket": "impact-dfw-22.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:600595896686:android:20824139e9c8fcb6fec97f",
+        "android_client_info": {
+          "package_name": "com.example.untitled"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "600595896686-5kk11k389d9d3993999m6l5p4974206p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFDwg4M6k7nuv3I6gNO_Cm_t1wLo2Ucbg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "600595896686-5kk11k389d9d3993999m6l5p4974206p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
